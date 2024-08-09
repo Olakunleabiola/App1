@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Clone the repository containing the Python code
+                git 'https://github.com/Olakunleabiola/App1.git'
+            }
+        }
+        
+        
+        stage('Run Application') {
+            steps {
+                // Run the Python application
+                sh 'python to-do-list'
+            }
+        }
+    }
+    
+    post {
+        always {
+            // Clean up the workspace after the pipeline run
+            cleanWs()
+        }
+    }
+}

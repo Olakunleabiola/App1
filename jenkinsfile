@@ -1,2 +1,2 @@
 @Library('team10_sharelib') _
-welcomeJob 'https://github.com/Olakunleabiola/App1.git'
+etechApp 'https://github.com/Olakunleabiola/App1.git'
